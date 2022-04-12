@@ -323,7 +323,7 @@ function addSongs(songs){
 
     let newContentHeading = document.createElement("H3");
    newContentHeading.classList.add('contentTitle');
-   newContentHeading.innerText = "Title" + key['name'];
+   newContentHeading.innerText = key['name'];
    newContentElement.appendChild(newContentHeading);
 
    let newContentSubhead = document.createElement("H4");
