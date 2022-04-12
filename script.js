@@ -1,187 +1,303 @@
 var songButton;
 var songGrid;
-let songs{
-  "landslide": {
+let songs = [{
+    "title": "landslide",
     "name": "Landslide",
-    "artist": ["The Chicks"],
+    "artist": [
+      "The Chicks"
+    ],
     "album_art": "Chicks_Home.jpeg"
   },
-  "georgia": {
+  {
+    "title": "georgia",
     "name": "Georgia on My Mind",
-    "artist": ["Chloe x Halle"],
+    "artist": [
+      "Chloe x Halle"
+    ],
     "album_art": "cxh.jpeg"
   },
-  "right": {
+  {
+    "title": "right",
     "name": "Right on Time",
-    "artist": ["Brandi Carlile"],
+    "artist": [
+      "Brandi Carlile"
+    ],
     "album_art": "righttime.jpeg"
   },
-  "life": {
+  {
+    "title": "life",
     "name": "This Is A Life",
-    "artist": ["Son Lux", "Mitski", "David Byran"],
+    "artist": [
+      "Son Lux",
+      "Mitski",
+      "David Byran"
+    ],
     "album_art": "thisisalife.jpeg"
   },
-  "fast": {
+  {
+    "title": "fast",
     "name": "Fast Car",
-    "artist": ["Tracy Chapman"],
+    "artist": [
+      "Tracy Chapman"
+    ],
     "album_art": "tracychapman.jpeg"
   },
-  "babyhold": {
+  {
+    "title": "babyhold",
     "name": "Baby Can I Hold You",
-    "artist": ["Tracy Chapman"],
+    "artist": [
+      "Tracy Chapman"
+    ],
     "album_art": "tracychapman.jpeg"
   },
-  "jolene": {
+  {
+    "title": "jolene",
     "name": "Jolene",
-    "artist": ["Dolly Parton"],
+    "artist": [
+      "Dolly Parton"
+    ],
     "album_art": "jolene.jpeg"
   },
-  "witch": {
+  {
+    "title": "witch",
     "name": "Which Witch",
-    "artist": ["Florence + The Machine"],
+    "artist": [
+      "Florence + The Machine"
+    ],
     "album_art": "whichwitch.jpeg"
   },
-  "vain": {
+  {
+    "title": "vain",
     "name": "You're so Vain",
-    "artist": ["Carly Simon"],
+    "artist": [
+      "Carly Simon"
+    ],
     "album_art": "sovain.jpeg"
   },
-  "cowboy": {
+  {
+    "title": "cowboy",
     "name": "cowboy like me",
-    "artist": ["Taylor Swift"],
+    "artist": [
+      "Taylor Swift"
+    ],
     "album_art": "evermore.jpeg"
   },
-  "issoai": {
+  {
+    "title": "issoai",
     "name": "É Isso Aí (The Blower's Daughter)",
-    "artist": ["Ana Carolina", "Seu Jorge"],
+    "artist": [
+      "Ana Carolina",
+      "Seu Jorge"
+    ],
     "album_art": "anaejorge.jpeg"
   },
-  "amoeba": {
+  {
+    "title": "amoeba",
     "name": "Amoeba",
-    "artist": ["Clairo"],
+    "artist": [
+      "Clairo"
+    ],
     "album_art": "clairo.jpeg"
   },
-  "gimme": {
+  {
+    "title": "gimme",
     "name": "Gimme All Your Love",
-    "artist": ["Alabama Shakes"],
+    "artist": [
+      "Alabama Shakes"
+    ],
     "album_art": "alabamashakes.jpeg"
   },
-  "loque": {
+  {
+    "title": "loque",
     "name": "Lo Que Construimos",
-    "artist": ["Natalia Lafourcade"],
+    "artist": [
+      "Natalia Lafourcade"
+    ],
     "album_art": "natalia.jpeg"
   },
-  "dream": {
+  {
+    "title": "dream",
     "name": "Dream a Little Dream of Me",
-    "artist": ["Ella Fitzgerald", "Louis Armstrong"],
+    "artist": [
+      "Ella Fitzgerald",
+      "Louis Armstrong"
+    ],
     "album_art": "ella.jpeg"
   },
-  "moi": {
+  {
+    "title": "moi",
     "name": "Moi c'est",
-    "artist": ["Camélia Jordana"],
+    "artist": [
+      "Camélia Jordana"
+    ],
     "album_art": "moicest.jpeg"
   },
-  "alliask": {
+  {
+    "title": "alliask",
     "name": "All I Ask",
-    "artist": ["Adele"],
+    "artist": [
+      "Adele"
+    ],
     "album_art": "alliask.jpeg"
   },
-  "troca": {
+  {
+    "title": "troca",
     "name": "Troca de Calçada",
-    "artist": ["Marília Mendonça"],
+    "artist": [
+      "Marília Mendonça"
+    ],
     "album_art": "trocadecalcado.jpeg"
   },
-  "hasta": {
+  {
+    "title": "hasta",
     "name": "Hasta la Raíz",
-    "artist": ["Natalia Lafourcade"],
+    "artist": [
+      "Natalia Lafourcade"
+    ],
     "album_art": "natalia.jpeg"
   },
-  "segundo": {
+  {
+    "title": "segundo",
     "name": "O Segundo Sol - Ao Vivo",
-    "artist": ["Cássia Eller"],
+    "artist": [
+      "Cássia Eller"
+    ],
     "album_art": "segundosol.jpeg"
   },
-  "pretty": {
+  {
+    "title": "pretty",
     "name": "I Feel Pretty / Unpretty",
-    "artist": ["Glee Cast"],
+    "artist": [
+      "Glee Cast"
+    ],
     "album_art": "glee.jpeg"
   },
-  "songbird": {
+  {
+    "title": "songbird",
     "name": "Songbird",
-    "artist": ["Glee Cast"],
+    "artist": [
+      "Glee Cast"
+    ],
     "album_art": "glee.jpeg"
   },
-  "lonely": {
+  {
+    "title": "lonely",
     "name": "Lonely",
-    "artist": ["Chloe x Halle"],
+    "artist": [
+      "Chloe x Halle"
+    ],
     "album_art": "lonely.jpeg"
   },
-  "ela": {
+  {
+    "title": "ela",
     "name": "Ela Diz Que Me Ama",
-    "artist": ["Roberta Sá", "Gilberto Gil", "Jorge Ben Jor"],
+    "artist": [
+      "Roberta Sá",
+      "Gilberto Gil",
+      "Jorge Ben Jor"
+    ],
     "album_art": "eladizquemeama.jpeg"
   },
-  "beija": {
+  {
+    "title": "beija",
     "name": "Beija Eu",
-    "artist": ["Marisa Monte"],
+    "artist": [
+      "Marisa Monte"
+    ],
     "album_art": "beijaeu.jpeg"
   },
-  "carinho": {
+  {
+    "title": "carinho",
     "name": "Carinhoso",
-    "artist": ["Paulinho Da Viola", "Marisa Monte"],
+    "artist": [
+      "Paulinho Da Viola",
+      "Marisa Monte"
+    ],
     "album_art": "carinhoso.jpeg"
   },
-  "rosyln": {
+  {
+    "title": "rosyln",
     "name": "Rosyln",
-    "artist": ["Bon Iver", "St. Vincent"],
+    "artist": [
+      "Bon Iver",
+      "St. Vincent"
+    ],
     "album_art": "roslyn.jpeg"
   },
-  "dancer": {
+  {
+    "title": "dancer",
     "name": "Tiny Dancer",
-    "artist": ["Florence + The Machine"],
+    "artist": [
+      "Florence + The Machine"
+    ],
     "album_art": "tinydancer.jpeg"
   },
-  "cello": {
+  {
+    "title": "cello",
     "name": "cellophane",
-    "artist": ["FKA twigs"],
+    "artist": [
+      "FKA twigs"
+    ],
     "album_art": "fkatwigs.jpeg"
   },
-  "icu": {
+  {
+    "title": "icu",
     "name": "ICU",
-    "artist": ["Phoebe Bridgers"],
+    "artist": [
+      "Phoebe Bridgers"
+    ],
     "album_art": "bridgers.jpeg"
   },
-  "end": {
+  {
+    "title": "end",
     "name": "I Know The End",
-    "artist": ["Phoebe Bridgers"],
+    "artist": [
+      "Phoebe Bridgers"
+    ],
     "album_art": "bridgers.jpeg"
   },
-  "savior": {
+  {
+    "title": "savior",
     "name": "Savior Complex",
-    "artist": ["Phoebe Bridgers"],
+    "artist": [
+      "Phoebe Bridgers"
+    ],
     "album_art": "bridgers.jpeg"
   },
-  "somebody": {
+  {
+    "title": "somebody",
     "name": "Somebody Like You - Orchestral Version",
-    "artist": ["Bree Runway"],
+    "artist": [
+      "Bree Runway"
+    ],
     "album_art": "bree.jpeg"
   },
-  "chuva": {
+  {
+    "title": "chuva",
     "name": "Quando A Chuva Passar",
-    "artist": ["Ivete Sangalo"],
+    "artist": [
+      "Ivete Sangalo"
+    ],
     "album_art": "ivete.jpeg"
   },
-  "care": {
+  {
+    "title": "care",
     "name": "I Care - Homecoming Live",
-    "artist": ["Beyoncé"],
+    "artist": [
+      "Beyoncé"
+    ],
     "album_art": "icare.jpeg"
   },
-  "francis": {
+  {
+    "title": "francis",
     "name": "Francis Forver",
-    "artist": ["Mitski"],
+    "artist": [
+      "Mitski"
+    ],
     "album_art": "francisforever.jpeg"
   }
-}
+  // }
+];
 
 document.addEventListener("DOMContentLoaded", function(){
   songButton = document.getElementById("generate_songs");
@@ -193,35 +309,36 @@ document.addEventListener("DOMContentLoaded", function(){
 });
 
 function addSongs(songs){
-  for (var key in songs){
+  for (var key of songs){
     let newContentElement = document.createElement("DIV");
     newContentElement.style.backgroundColor = "#EDEDED";
     newContentElement.classList.add('contentItem');
 
     let newImage = document.createElement("IMG");
     newImage.classList.add("footerImage");
-    newImage.src = var['album_art'];
+    newImage.src = key['album_art'];
     newContentElement.appendChild(newImage);
 
     let newContentHeading = document.createElement("H3");
    newContentHeading.classList.add('contentTitle');
-   newContentHeading.innerText = "Title" + var['name'];
+   newContentHeading.innerText = "Title" + key['name'];
    newContentElement.appendChild(newContentHeading);
 
    let newContentSubhead = document.createElement("H4");
-   newContentSubhead.innerText = "Artist:";
+   //newContentSubhead.innerText = "Artist:";
    newContentElement.appendChild(newContentSubhead);
 
    let newContentArtistList = document.createElement("UL");
    newContentElement.appendChild(newContentArtistList);
 
-   for (var i = 0; i < songs['artist'].length; i++) {
-     var currentArtist = var['artist'][i];
+   for (var i = 0; i < key['artist'].length; i++) {
+     //var currentArtist = var['artist'][i];
      var newArtist = document.createElement("LI");
      newArtist.innerText = currentArtist;
      newContentArtistList.appendChild(newArtist);
    }
 
-   contentGridElement.appendChild(newContentElement);
+   //contentGridElement.appendChild(newContentElement);
+   songGrid.appendChild(newContentElement);
   }
 }
