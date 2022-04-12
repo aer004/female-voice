@@ -315,6 +315,7 @@ function addSongs(songs){
     let newContentElement = document.createElement("DIV");
     newContentElement.style.backgroundColor = "#EDEDED";
     newContentElement.classList.add('contentItem');
+    newContentElement.style.textAlign = "center";
 
     let newImage = document.createElement("IMG");
     newImage.classList.add("footerImage");
