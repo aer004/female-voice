@@ -309,7 +309,9 @@ document.addEventListener("DOMContentLoaded", function(){
 });
 
 function addSongs(songs){
+
   for (var key of songs){
+
     let newContentElement = document.createElement("DIV");
     newContentElement.style.backgroundColor = "#EDEDED";
     newContentElement.classList.add('contentItem');
@@ -333,6 +335,7 @@ function addSongs(songs){
 
    for (var i = 0; i < key['artist'].length; i++) {
      //var currentArtist = var['artist'][i];
+     var currentArtist = key['artist'][i];
      var newArtist = document.createElement("LI");
      newArtist.innerText = currentArtist;
      newContentArtistList.appendChild(newArtist);

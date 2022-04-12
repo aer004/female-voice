@@ -32,6 +32,14 @@ button {
   grid-gap: 10px;
 }
 
+#songs_container > div {
+  width: 100%;
+}
+
+#songs_container > div > img {
+  width: 100%;
+}
+
 .content{
   display: grid;
   justify-items: center;
